@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Script Website</title>
+
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #000000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        font-family: 'Comic Sans MS', cursive;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav a {
+        color: #f5f3f3;
+        font-family: Georgia, 'Times New Roman', Times;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-size: 20px;
+    }
+
+    .nav a:hover {
+        background-color: #b91313;
+    }
+
+    /* about my website  */
+    .image {
+        width: 110px;
+        height: 70px;
+        background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQUFBcVFBUXFxcZGCAZGRoZFRkXHRoZFxkYHhoXGRwgICwjHh4pIBoZJDYlLi0vNEA0GSM7PjgwPSwyMy8BCwsLBgYGDwYGDy8cFRwvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcCCAH/xABQEAACAQMBBQQFBQoKCAcAAAABAgMABBEFBhIhMUETIlFhBzJxgZEUUnKhsSMzQmJjgpKywdEVJDVDU3N0oqPCFyU0VJOz0vAWZIOUw+Hx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOzUpSgUpSgUpSgUpURrO0FtajM0iqcZC+s59ijjjz5UEvWN5AASSABzJ4Ae2qP/AOKL674WNoUjPKabgMeIGcfAt7Kj9R0aNQJNWv2kPMRK26v5qAZPtVVoLPqO2tjDwM6u3hGDJ7sr3R7zWiNsZ5P9m0+4kHRpMRL7c4IPxqLstRjj/wBg07HTtZcRZHjvNmRh76zPJqUnrTxQjwii3zj2yUEiNQ1d/VtrWL+slZz/AHDXtE1dvWmso/oRSv8ArEVDNoUz/fLy7b6MnZj4AU/8LA85LhvbO1BYY7PUut7B/wC0J/8AkFZ0g1Ac7i1b22sin4if9lVY7L49WW6X6M7fuoNGuU+9310Ppv2o+BoLtFJcj1kiYeKyOp9ylCP71SFc7S51WP1Z4ph+Vi3D/cx9tbUe2dxH/tNm+71eFhIPbu9B7TQXulVeHaC0vozElwyM/DuuYZAQQe4Tg5yOmRzByK1JbjUrLiQL6AdQBHOg8wOD4HgCT5UFzpUHoW01teD7lJh+sb91xjn3euPEZFTlApSlApSlApSlApSlApSlApSlApWCeZUGWOOOB1JJ5KBzJPhWQtgZPCgqF5dahdu0dshtIVYq00q4kfBwTGvQeB68DvDlWt/BGn6fiWdjNMxyGk+6yO35NPHPXifFq2tR2jkmZorHdIBw9wwzGh6iMfzj/Vy5150rQFRjId6SVvWmkO858gfwR5Cg1Z729uuX8UiPQYeZh5/gx/aK2NM2ajjO+qbzniZJCZJCfEseXuxVlt7ADnW6qAUEXDpY61uJZKOlbdKDCIF8K9dkvhWSlBi7FfCvLW6npWelBpPYKelac2kjpUzSgourbMxyZ7SME/OA3W/SHE++oqL5dZfeZDPEP5qXiwHgr/8A2B5GumMgNaF1pyt0oKOZLHUmw4a1vAeB9R98cuPASe/DeGK24ddu9PYJfgzQE4W4QZI8A46nyPe54L1613ZpJB314jkw4MPYfDyPCou01uW0+43o7e2buiQrvEA/gyA53h5Hj4E8qDpNndpKiyRsrowyGU5BrYrnQsJbL+Naa3bWz9+SDeLcPnxniTw/OGOO8OAuOiaxFdxCWFsg8CD6yN1Vh0P/AOjIoJSlKUClKUClKUClKUCtLUb9II2lkbCKMnqT0CqOZYnAA6k1u1UrKT5dcfKD/sluxEI6STLkPOehVeKr55NBv2Ktg3d1iNt0lUYjdgi5kE8u0I4u35o4DJgru7k1E4G9HZ+WVkuB4+KRH4n7P27nOoydfkaN3R/vDqfWP5JSOA6kZ6VZrKz6mg19P01VVVVQqqMBQMADwAqYjiC16UYr1QKUpQKUpQKUpQKUpQKUpQKUpQYpYgw41XtX0cMCN0EEYIIyCPOrNXhlBFByq2uZtLk3k3pLVm78ecmMn8Jf38jyPHBqwPa7rDUdNw++MzQrwWZepUfgyg54eOepIaX1fTAQeGQeYxkEHoapNldSaXNvDea1kbvrxJjY/hD/AL4gY5gGg6Xpl/HcRLLG2VYcOhBHAqw6MDkEeIrcrSsI4sNJEFxKRISvJyVA3/aQBx8q3aBSlKBSlKBSla93crHG8jnCopZj4BRk0Fc2uvHkaOwhOJZ+MjDnHAPXf2tgqPfyOK1dZKsU0637kaIvblT6sX4MIPz5McTz3cnrWlpN60UM+pyrmW4YLDH13M7sMS/SOCcdFBqV2f05kXvneldjJK/zpG5+4cFA8AKCU02yAAAACgAAAYAA5AVLqMV5iTArJQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQeHQEYqsa9pasrArlWGCPEVaqwXEQYYoOe7Gao1pP8AIZWJjY5gY+ee57+Pvz4irXZX8iXcttM28HHa27YAzHwDxHAwWRuI6lWGeVVXa7SC6EpkSId+MjgcjjgHzx8QKyy6m13Yx3sePlFo/aMBwzujEyeSsh3vhQdDpWtY3SSxpIhyjqGU+TDIzWzQKUpQKpe3EzTPBp8ZIM778pHNYYzk/EqSPoY61czXOtMvw89/qL8UiBhi81jGTj6WEP8A6hoNu6ZZrxY0GIbNQqgcu2dcAD6EfDyLVbdPhwM1VtkrJljUvxkkJlkPi8h3jn6h7quka4FB7pSlApSlApSlApSlApSlApSlApSlApSlApSlApSlBDa1a5XIqjaHN8kvzE33q6GMHkJOPD3kkfnr4V0y4TeUiua7bWRCdonB4mEinqMHj8OB/NoLBsJIY/lFkx428p7PPWKTLJ7ep/OFXCudjUAt3Y3y8Euo+wl8A5wUz572B7IzXRKBSlKCH2pvuwtJpQcFYzu/Tbup/eYVRza9np9ja9Z5Fkk8Sn3w/AdmPdU36T5CbVIl5zTon6zfrBawaooa/ijA7sNuSPIyNuY/RUUFj0mPrUzWjpqYWt6gUpSgVFbS3LxWd1LGd147eR0bAOGSNmU4PA4IHOpWoTbL+Tr3+yzf8p6D5putrNQkJL3twcnOBM6r7lBAHuFbuj7eajbOGW6kcdUmdpUIHTDHK58VIPnVbgiLuqDmzBR7ScCutenDQLeIQXEUaRu7MjhFCh+G8HIHDI4gnGTvDPIUHTdjdpk1G2WdButnckTOdxxjIz1BBBB8D45Fcl9LW1dyuoNDb3E0SRIqMI5XQM5G+zHdYZOGVePza3/QVd9ml+7nEUaRyMSeC7omJPgO6Dn2CuW6jdvc3EkpBLyys+Bx70jE7o+OBQTmzO1tzFeW8ktzMyLIu+Hld13GO65ILfNJPtrunpN1Ca302aWCQxyKyYZcZAaRFPPyNfPG1Gkmzu5rYnPZvgHxUgMhPnukV2DaHVPlWzBlJy3ZxK5PMvHcRo5PtKk++g5rpm1uozXMKPe3GHlRSBK6ghnUEYUjxrN6TruRdUugsjgb68AxA+9R9M1B7JpvX1mvjcxD4ypUn6TTnVbv+sH1ItB1L0FFms53ZixNxu5JJ9WOM44/SqH9J212q2N2Y45gkLqHiIijJKngyszKe8rA8uhU9asnoRt9zTN7+knkf4bqf5K2/Svs38ssWZFzLBmVMDiVA+6IOBPFRnA5si0Fd9F23kksV2L2Uu0KfKAxAz2SjEigADkQuPN6osXpB1eWfdhuH3pZMJGFjYAyN3UXeXlxAFU6Kd13gjFd5d1sHG8pIJU+IyBw8q6/6EdlM51CVeHFIAfHirye7ig/O8qDrGkQTRwos8vayhfukm6q7zHicBVACjOBw5AZ45Nb9KUClKUH4aq20dqGBBHAgg+wjBq1VD65HlTQc2skMmlXEJP3S1l7RT1UKckjw/na6lo1729vFL8+NWPkSBke45Fc72fQC+uYD6s8JPvwAf1nqx+jKctYqh5xyPGfLjv4/v0FwpSlBRtuu/d6dH0Mxc/mNF+wmvNv3767b5pijHuj3j9bVk2rH+stP9sn2LXnSRm4uz/5jH6MUVBcbRcKK2KxQDuistApSlAqB24bGnXv9mlHxjYftqerQ1nTlubeWBmKiVGQsMZAYYJGaD5M064EcschG8EdXIzjIVgSM+eKsG2m1s2qzozJuqvdiiUl8FyM8cAszEKOQ5Dh49Ni9CdpnvXM5HgBGp+JU/ZVs2c2EsLEhoYt6QDHaSHffqMrnuqTk53QOdBzm50xtI0GUSd25vHVGGOKqwP3M+yNZM+BkI9vLNPjlaVBArtJvAoI1Zn3l4gqF45GM8PCvqLafZW21BUW5DkISV3XZMFsZJA4E8OGR1PjUNs/6MrOyuUuopJy6b26HdGXvoyk8EB5MetB8/64l2JS14syyuAxMyurso7obvjJHdxn8Xyq37Najv6HqdqeaGOVcnPB5IwwA6AGMH8+uvbXbDW2pPG87SqY1Kjs2Rd4Eg4Ysp4DB5Y9Y1qW/oz0+KOVIlkQyxGJn7RmbcLKxwD3c5RTy6UHDNgId/U7MeE6N+gd7/LXr0iPvaneH8sw/RwP2V2rQfRZZWlxHcRyXDPGd4B3jKkkEcQIwevjWLU/RNZXE8s8ktzvyyNIwV4woLsTujMZOOnOg4vpW2d/axLDBcNHGpJChUOCxJPEqTzJr6K2GuZZdPtpJ5DJJJHvsxABO+xI4AAcAQPdUHD6JtLXGYpH+lM4z7d0irlY2aQxpFGu7HGoRBknCqMAZJJPDxoPj6vqr0f/AMmWf9Qn2VTv9Cdl/vFx/h/9FdC0PTFtbeK3UsyxIEBbGSB444UEjSlKBSlKBWjqaZQ1vVq3/qGg5ordnqls3zlZD8JP2kVPejw7sl/H826Yj2MWA+pBVe1U4vrM/lSPiU/fU9sScX2pL+UQ/Fpv30F6pSlBSdreGo6cfxpB9Uf76zaSmJrr+0k/pQwn9teNs1xeaa/Tt2T9PswPsNSEEYW5nHVjHJ+lH2ef8E/Cgn4uVZKxxcqyUELdbU2MUjRy3UEbqcMryqpBIB45PgRWwdat+we5WZHhRWZpIz2igIMt6mc48Bxr5i24nL6jeMTn+MSKPoq7Kv1AV2TZ637PZlwebWlw/wCn2pX6itBMw+kzSXYIt1lmIUDsZxkk4AyY62tb27060cxzXAEi80VHcjlwO6pAODyJr5k05C0sYXmZFA9pYYqw+k7+Vbv+sH6iUHY09Lmlk4LyAeJhbH1ZP1VbdH1q3u4+0tpUkTqVPEE9GU95T5EA183adsRdT2Ml/GY+yj3yylmDkRjLEDd3cAZPPPA1j2B1iS1v4HjYgPIkci9HjdgGBHU8cjzANB37VNvdNtmZJbpA6kqyoryFSpwVbcUgEHhg1r2npL0qRggugpPLfjkjX3syhR7yK+fdsT/rC9/tU3/Nelxs3cpaR3hjJt5CQHBBwQzLhhzXJU4JGOI45OKD6uikV1DKQykZBBBBB5EEcxUZtDtBb2May3LlEZggwrOSxDHGFBPJTxrkPoS2kdLg2LsTHIrNEDk7kiAswXwDKGJHio8TnJ6edV3p4LUHhGhlbwLSHCg+YVSfz6C4y+l3S1HBpW8liP8AmIq7Xd8kcLzs33NEMjMAT3FUsSAOJ4Cvj4ivojZa9a92fdEG9KLWW23RxJdI2RF9pUofzqDa/wBLGk/0z/8ABk/6af6WNJ/pn/4Mn/TXB9Z2WvLNFkuYGiVm3VLFTlsE4wCTyBrU0bSpbuZYIF35HzurvKud1Sx4sQBwBoPp/Zvaq11ASG1dnEZUNlGTG/nGN4cfVNRW0fpH0+ycxO7SSKcMkShyp8GYkKCOozkeFc/tILvQtLumlURz3EqRRFXVyO6+83dPAhQ+D4kVz3Z/Q5r64WCAAu2SSxIVVHEu5wcD3dQOJNB9A7N+kewvZBEjPHIxwiSqELnwUqzLnyyCfCrbdXKRIzyOqIoyzMwVVHiSeAr5T2i0SfT7kwSkCRN1g0ZJUgjIZSQD9Q4g1afSHtbLd2thGWO60HaydO0lEjxEkeRicj6fsoOjX3ph0xG3U7eUfOjiAH+IyH6qm9mNurLUHMcDP2gUuUeNlIUEAnIyvNh161wPZXY2fUFZongRUIUmWTd4kZ4KFY488Y+Brp3ou2HurC7klm7No2gKI8bh1JZ0PUBuSeGONB1etW/9Q1tVoao+ENBzbVRm+sx+VJ+BQ/sqd2O/lHUPpJ/nqFRe01S3Xois5+En7QtTewI37nUJejT7o9iNL+xloL1SlKCo+kBMR2sn9HeRMT4DJH27tSV4Ny6U4++wlSfOFwVHwlkP5tZ9pNK+V20kG9ulwN1sZ3WVgynHtArDtCN2OOU84ZFdjyG4QUkJ8gjs2PxRQSlueFZ607V+lblB8nbZxldQvAcj+My8/AyMQfeCD767Bc6kqbLhgQd62WLn+EziNh7jvfomqr6aNmHjuTeopaKUDtCOPZyKAve8AwCkHx3vLNAk1q4a2W0MhMCOXVOGAxzk5xnqeGccT40EhsBYGfUrRB/Sq5+jF32HvCEe+s/pN/lW7/rB+oldN9DWx8lur3lwhWSRdyJWGCsZILOw6FiFx1wD86uZekz+VLv+s/yLQYrbbK6jsmsY2VIW3t4he+wf1lLE+qeXADhwqzejXYK5muY7meNoYInEg313WkZCCqqp47ucEtjGMgeXRPQ7Cn8FwtuLvb0ne3Rn74/XnV+oPkjahs3t0fG4l/5jV1nW76G32ahifd35oUEaE8WYusjOB4L62eWd0dRXKNoIHa8uMKxJnkwApJOZGqS0vYvU7xlCwSgABe0mDRoqjgMM/MDwXPsoJL0NWjPqsTDlEkjt9ExtGP70i1A7aap8rv7mcEFXkIQjqiYSM+9VWu02ey38EaZdGAPNdvGQWjjLMXYbiCNQCdxC298SeGAOES6RcqQHglQsQo3o3XJY4A4gcSaCT2gktTbWKwSb8qQuk43HXdJkaRRkqA2DI4yM+qPKug+gPVcG5tSeYEyD2YSQ/XH8DURt16MVsLUXEUrykSKjqVAwHyN4Y4k726MfjVH+jWzvLfULeX5Lc9mW3HYQSboSQbu8xxgKpIbP4tBf/T0n8RhbwuQPjFL+6uf+hqLe1WI/NSRv8Nl/zV0f06xk6dHjpdIfjHMPtIqkehWykXUd9o3C9i+GKMBklOGSMUFp9Pob5NbH8HtmB9pQ4+oNXKdkbO8muOzspGjlZTxWbsSUBBZc5BYcAd0Z9XOOFfRe3Ozo1CzkgyA/B42PJZFzu+wEEqT4Ma+ZryzntJikqvDLGc8cqwIPBlI5jhkMDjqDQX279F18cS3t5AgJC7zyySNknCoMqMkngAD1qw656MQ9pa2qXEXyyFZN3e7gmiaVnYY4sNwvwPEZY5xvAjnezEt1e6jaCR5rgrNGxLu8pWNZFLtkk4UAcTyq7+nO0uXmgkSKQwxxEmRVJVXLksGI9XAVTk45+VBSNb2A1G0jaaaECJMbzrJGwGWCg4Db2CSOlb3oq1+W2v4YlduymcRume6S/BXxyDBt3jzxkdaqtxqtxIu5JPK6fNaV2Xhy4E4ronoi2MmkuUvZUaOGPvR76lTK5XulAeaDO9vcsgAZ44DvVQ2uy4WpgmqntLeBQzHkoLH2AZoK3s0wa+uZz6kMW77ORP6j1O+i+AizMrc5ZXc+7CfarfGqnaOYdJnlb75dSFF8SGO6QPHgJT766doNj2FtDF1SNVPm2O8fexJoJKlKUCsNzCsiMjDKspVh4hhgj4Gs1VPbLUJ7Vre5RiYEcpPGADlZMAPyzkcceZXxNBs6FcNubjnMkTGGQnmWjxhz9NCj/n1YFORVZ1FhHPHOpBiuAsbEcu0AzDJ7GBKZ8ezqds5cjFBsSIGBDAEEYIIyCD0IqLttmbGNw8dnbo4OQywRgqfFSF4H2VMUoFaMulwMSzQxMx4kmNCSfEkjjW9SgwwW6Iu6iKq+CqFHHnwFZqUoFKUoFKUoFKUoFKUoFat5YRTDdmijkXwdFcfBga2qUGtaWccS7sSJGvgiKg+AFbNKUGqLGINvCJN7524ufjjNbVK/CaDBdy7qmuZbX3LSFII+LzOFHsyOJ8s492aumuXmARmqdssqyTTahLwigVljJ/FUlmHnuk++TyoJC6s1kvbKxj4x2yCaT83AjB8+C+6Sug1UthLNikl5KMS3T9p9GIZ7NR5Y4+zd8Kt1ApSlArWvrVJUaOQbyupVh5EfUfOtmlBSdnrXMU+l3JJaLgjci0D8Y5EPirDpyIUdK3NFvX70cv36I7kvQN8yVfxXXve3I6VJ6ppxaSO4j4SxEj+sib75E3t4Mp6Mo6Zzp7SWDgrdQLvSxjDoP56LOWj+kD3l88j8KgnoXyKy1A6TqSSIsiNvIwyp/YfAjkR4iptGyKD3SlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBWnfXIRTWW4nCjNUjafXljQseJ5Kvzm8PZ4mgidpbySaRbWLjLKcH8VOpPuBz5A+VS9/pqkW+kw53SBJcsOBESNk5I5NI/wD3isGz9l8ihe9ulL3E2FSMDvkv6kKD57HGfAD8U1aNmtKeFXkmIa5mbflYcgcYWNfxEHAe+gmI0CgKoAAGABwAA5AVkpSgUpSgUpSgV4YgAk8B1r3Sgp2sWL2btcQqWhc708SjJRus8Y/WXrz8aldN1FWVWVgysMqwOQQeorBcl7LLqrSWnNkUbz2/i0Y5vF4pzX8HK91Yi6sGhHyqxxLbyd94UIPPnLB4HxTr7aC7o4Ne6q+j60kiB43DLy8wfmsOYPlVgguQ1BsUr8r9oFKUoFKUoFKUoFKUoFKV+E0H7WC4nCDjWC7v1Qc6pu0O0ixjvHJPqoObfuHnQbO0OvJGhZzgdB1Y+AqM2b0cyMdQvsJGg34kbgqKvHtGz4cx58fCmiaAXPy3USERBvJE/BUXozg+7u8+WePAWawc3rLKUK2qENErjDTODlZnU8kXminiThjjC0GTTLRp5RdzKVCgi2iYYMaNzkcdJHHT8FcDmWqwUpQKUpQKUpQKUpQKUpQKqd/ostszT6fjvHeltWOI5PFo/wCjf2cDw99spQc/jggvWaa0c214v3yNlwSRzWaP8IZ/DHHx4jFItbeBxHeJ2Dngr5zFJ5o/T2GrBr2zEV0RIC0U6+pNGd1xjlnHrD6/Aiq/d6lc2qmLU4BcQHh28aBhjp2qHgD58PLeNBZrbU+WakorlW61QLXSkdTJpV0pXmYJCXQZ6YP3SOv069Jbndu4pIT88DtIz7HXl7KDooNftVSx19XGUdXHirA/HHKpKPWB1oJmlRyamp61k/hBPGg3aVonUU8axPqijrQSdeCwFQ0usDpUNqO0scfryqvkTk/ojj9VBa5rxV61CahrQAJyABzJOAPaaqP8Oz3J3bOCSXpvsN1B784+JFZZNmd1e21S6AQcRGh3Vz4Dqx8lGfM0Gvca3LcyGKzQyt1cjCJ55P7fdmtyGxtdNxNeSdvdNxVR3myeW4p5eG+ceWOVerPUri4XstKtxDCDgzyKFHmUGCM+fePiFqw6BsjFbN2sjGe4PEyycSD1KAk49pJPn0oNCw0ae9dZ9QG5Gp3orUeqPB5vnHyPvAGVq61+0oFKUoFKUoFKUoFKUoFKUoFKUoFeWAPA16pQVTVNhrWVu0jDW8vMPCdzj47vIe7B86jZNP1e3GEkhvI/myDdcjwySM+9zV9pQchvntgc3enT2rf0kOQvHrnur9tZrRIpMfJtVZT0W4UE+zL7v1Zrq2BURf7MWc2TJbxknmwXcb9JcH66Cp/wTqgGUktZR0J31z+iMfXX58k1UfzNufZIw+01KnYC3Q5gluLc/kpSB78jP11uWOhXkbqTqEskYYFkeKNiyjmpcnIz4igr3yHVj/NW6+13P2GvSaBqr+tLbxD8RWc/3l/bXRKUFCTYSR/v97K46iMCMfaQfhUvp+xNlFxEIc+MhL+/B7o9wqzUoI+/t5OyZbYpHJwCF1JVeIycDrjOOmcVB2exUZftbyR7uXxk4IPJYxwx5HI8hVspQY0QAAAAAcAAMADwFZKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoP/Z);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        right: 10%;
+        top: 55%;
+    }
+
+    .article {
+        .h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        h2 {
+            text-align: left;
+            color: rgb(0, 86, 244);
+        }
+    }
+
+    /* footer ka section  */
+    .footer {
+        width: 100%;
+        height: 90px;
+        background-color: black;
+        position: absolute;
+        top: 310%;
+
+        p {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+
+    }
+    .div1 {
+        font-size: 30px;
+        text-align: center;
+        border: 2px solid blue;
+        color: blueviolet;
+        font-family: cursive;
+    }
+
+    .story1 {
+        h1 {
+            text-align: center;
+            color: rgb(114, 227, 0);
+            font-size: 30px;
+
+        }
+
+        .parag1 {
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            position:absolute;
+            top: 150%;
+        }
+.parag2{
+    color: black;
+            font-size: 20px;
+            font-weight: bold;
+    position: absolute;
+    top: 180%;
+}
+        .parag3 {
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 265%;
+        }
+    }
+
+    .container {
+        width: 450px;
+        height: 250px;
+        background-color: black;
+        background-image: url(dont\ give\ up.JPG);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: absolute;
+        top: 210%;
+        left: 250px;
+    }
+
+    a {
+        color: #1939da;
+        font-family: Georgia, 'Times New Roman', Times;
+        font-weight: bold;
+        text-decoration: none;
+        background-color: black;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-size: 20px;
+        position: absolute;
+        top: 290%;
+        left: 300px;
+    }
+
+    a:hover {
+        background-color: #80f011;
+        color: darkblue;
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <div class="logo"> Digital Comic Script</div>
+      
+        </div>
+    </div>
+
+
+    <div>
+        <!--  my content goes here -->
+        <div class="image">
+
+        </div>
+        <div class="article">
+            <h1 class="h1" id="home">Welcome to the <strong style="color: rgb(7, 7, 118);">Digital Comics
+                    Script</strong>: Where
+                Stories Come to Life!
+            </h1>
+            <p>Welcome to our vibrant corner of the internet, where heroes soar through the skies, villains plot their
+                nefarious schemes, and ordinary people discover extraordinary powers. Here at [Digital Comics Website ],
+                we
+                celebrate the timeless art of comics and invite you to embark on an unforgettable journey through the
+                pages of imagination.</p>
+            <h2>Stay Daily Updated
+            </h2>
+            <p>Never miss a beat with our regularly updated selection of featured comics, news, and events. From
+                exclusive interviews with your favorite creators to in-depth analyses of the latest story arcs, we keep
+                you informed and entertained every step of the way. So grab your cape, tighten your utility belt, and
+                get ready for an unforgettable ride through the pages of comic history.</p>
+            <h2 id="About">Join Us on the Journey To Read Story </h2>
+            <p>Whether you're a lifelong fan or just dipping your toes into the world of comics, we're thrilled to have
+                you along for the ride. So sit back, relax, and let your imagination take flight as we explore the
+                endless possibilities of the comicverse together. Welcome about to [Digital Comics Script ] – where
+                stories
+                come to life!</p>
+        </div>
+    </div>
+    <div class="div1">Read The Story And Enjoy</div>
+    <div class="story1">
+        <h1> Don<sup>,</sup>t Give Up </h1>
+        <p class="parag1">A long time ago , there was a boy named Rodney in a village. He was very happy with family . But his
+            happiness could not for long . Rodney and his fellow villagers faced a sever drought . They desperately
+            waoted for rain but with no luck . All the crops land and even trees died up . The cattle started suding .As
+            there was no rain , the stream was druuing up slowely. </p>
+        <div class="container">
+
+        </div>
+        <p class="parag2"> One night ,during a meet with the villagers, Rodney said ,"friends , we all have heard tales from ouur
+            grandparents about an underground river flowing through our village . Why don't we dig a sea ?"The villagers
+            agreed and started digging. They dig sone day but gave up soon. howere, Rodney kept on digging. When people
+            told him to gave uup, he said , "god is helping and guiding my way."</p>
+        <p class="parag3">One day, when he had dug deep enough , Rodney saw water. His attitude of not giving up saved
+            the whole
+            village." Never give uup so easily" Rodney advised all the village. Now they are never short of wather . And
+            whenever any probleme arise all the villagers came up together and fond a solution.</p>
+    </div>
+
+    <a href="comicscript.html">click me</a>
+    <div class=" footer ">
+        <p>&copy; 2024 Code with Golu Ansari </p>
+        <p style=" margin-top: 10px ;
+   color: rgb(255, 115, 64);
+   font-size: 18px ;
+   "> I am Study in class 7<sup>th</sup></p>
+    </div>
+</body>
+
